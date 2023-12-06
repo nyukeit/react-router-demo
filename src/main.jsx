@@ -10,6 +10,27 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ItemDetail from "./pages/ItemDetail";
 
+const items = [
+  {
+    id: 1,
+    name: "Item 1",
+    description: "Item 1 description",
+    price: 10
+  },
+  {
+    id: 2,
+    name: "Item 2",
+    description: "Item 2 description",
+    price: 20
+  },
+  {
+    id: 3,
+    name: "Item 3",
+    description: "Item 3 description",
+    price: 30
+  }
+]
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,7 +50,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/itemdetail/:id",
-        element: <ItemDetail />,
+        element: <ItemDetail items={items}/>,
       },
     ],
   },
